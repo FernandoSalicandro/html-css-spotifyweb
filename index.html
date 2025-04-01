@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Document</title>
 </head>
 
@@ -15,17 +16,35 @@
         <main class="flex">
             <!-- NAV BAR -->
             <div class="nav-bar">
+                <!-- LOGO -->
+                <img src="./img/logo.svg" alt="">
+                <ul>
+                    <li class="home "><i class="fa-solid fa-house pr-10"></i><a href="">Home</a></li>
+                    <li class=""><i class="fa-solid fa-magnifying-glass pr-10"></i><a href="">Cerca</a></li>
+                    <li class=""><i class="fa-solid fa-lines-leaning pr-10"></i><a href=""> La tua libreria</a></li>
+                </ul>
+                <h4 >PLAYLIST</h4>
+                <a href="" class="create-playlist"><i class="fa-solid fa-plus "></i>Crea Playlist</a>
+                <ul>
+                    <li>Nome Playlist</li>
+                    <li>Nome Playlist</li>
+                    <li>Nome Playlist</li>
+                    <li>Nome Playlist</li>
+                    <li>Nome Playlist</li>
+                    <li>Nome Playlist</li>
+                    <li>Nome Playlist</li>
+                </ul>
             </div>
             <!-- MAIN CONTENT-->
             <div class="play-list flex">
                 <div class="play-list-main">
 
                     <div class="upgrade-bar">
-                     <a href="">Upgrade</a>
+                     <a href="">EFFETTUA L'UPGRADE</a>
                     </div>
 
                     <ul class="flex">
-                        <li><a href="">IN EVIDENZA</a></li>
+                        <li class=""><a href="">IN EVIDENZA</a></li>
                         <li><a href="">PODCAST</a></li>
                         <li><a href="">CLASSIFICHE</a></li>
                         <li><a href="">GENERI E MOOD</a></li>
@@ -33,7 +52,7 @@
                         <li><a href="">SCOPRI</a></li>
                     </ul>
                     <h1>Recently Played</h1>
-                    <div class="recently">
+                    <section class="cards">
                         <div class="card">
                             <img src="./img/metal_lifting.jpg" alt="">
                             <h3>Heavy metal</h3>
@@ -64,35 +83,35 @@
                             <h3>Sinister</h3>
                             <h4>Subtitle</h4>
                         </div>
-                    </div>
+                    </section>
 
                     <h1>Creato per John Doe</h1>
                     <h4 class="ml-20 mt-10">Più ascolti, più accurati saranno i suggerimenti</h4>
-                    <div class="recently">
+                    <div class="cards">
                        
                         <div class="card">
-                            <img src="./img/cure.jpeg" alt="">
+                            <img src="./img/radar.jpeg" alt="">
                             <h3>A Cure for Wellness</h3>
-                            <h4>Subtitle</h4>
+                            <h4></h4>
                         </div>
                         <div class="card">
-                            <img src="./img/sinister.jpeg" alt="">
+                            <img src="./img/mixdaily.jpeg" alt="">
                             <h3>Sinister</h3>
-                            <h4>Subtitle</h4>
+                            <h4></h4>
                         </div>
                     </div>
 
                     <h1>Artisti più Popolari</h1>
                     <h4 class="ml-20 mt-10">Più ascolti, più accurati saranno i suggerimenti</h4>
-                    <div class="recently">
+                    <div class="cards">
                        
                         <div class="card">
-                            <img src="./img/cure.jpeg" alt="">
+                            <img src="./img/youg.jpeg" alt="" class="circle-img">
                             <h3>A Cure for Wellness</h3>
                             <h4>Subtitle</h4>
                         </div>
                         <div class="card">
-                            <img src="./img/sinister.jpeg" alt="">
+                            <img src="./img/einaudi.jpeg" alt="" class="circle-img">
                             <h3>Sinister</h3>
                             <h4>Subtitle</h4>
                         </div>
