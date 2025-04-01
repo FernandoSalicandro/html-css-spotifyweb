@@ -421,7 +421,7 @@ h4 {
 
     --link-sub-color: rgba(119, 122, 127, 255);
 
-    --highlight-color:  rgba(173, 255, 47, 255);
+    --highlight-color: rgba(173, 255, 47, 255);
 
 
 }
@@ -480,6 +480,7 @@ h4 {
     padding: 10px;
     margin-right: 10px;
 }
+
 .nav-bar h4 {
     color: white;
 }
@@ -649,8 +650,71 @@ h4 {
 ################################### */
 
 .play-media-bar {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
     width: 100%;
     height: 80px;
     background-color: var(--play-bar-background-color);
     z-index: 9999;
+}
+
+.play-media-bar>* {
+    border: 1px solid red;
+}
+
+.right-media {
+    width: 50%;
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+
+}
+
+.left-media {
+    width: 50%;
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+    align-items: center;
+}
+
+.left-media img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+}
+
+.description-media {
+    height:100%;
+}
+
+
+.description-media a:last-child {
+    color: var(--link-sub-color);
+}
+
+
+
+
+.left-media h3 {
+    margin-top: 10px;
+}
+
+
+.like-folder {
+    align-self: center;
+    margin-left: 30px;
+    gap: 10px;
+    display: flex;
+}
+
+.fa-heart , .fa-folder {
+    color: var(--link-sub-color);
+}
+
+
+
+.center-media {
+    width: 50%;
 }
