@@ -17,9 +17,6 @@ body {
     color: white;
 }
 
-/* i:not(.fa-house) {
-    color:var(--link-sub-color)
-} */
 
 img {
     max-width: 100%
@@ -621,7 +618,6 @@ h4 {
     position: relative;
     color: var(--link-sub-color);
     margin-top: 100px;
-    /* background-color: aqua; */
 }
 
 .play-list-main ul a {
@@ -665,7 +661,7 @@ h4 {
     gap: 20px;
     padding-left: 20px;
     padding-right: 20px;
-    /* margin-top: 20px; */
+   
 }
 
 .card {
@@ -813,9 +809,6 @@ h4 {
     font-size: 20px;
 }
 
-/* .play-media-options i {
-    font-size: 20px;
-} */
 
 .play-media-options a:nth-child(3) i {
     font-size: 35px;
@@ -825,9 +818,6 @@ h4 {
     transform: scale(1.1);
 }
 
-/* .play-media-options .fa-circle-play:hover {
-    transform: scale(1.1);
-} */
 
 /* barra di progresso */
 
