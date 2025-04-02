@@ -1,1 +1,36 @@
-@media screen and (max-width:1024px)
+ @media screen and (max-width:1025px) {
+    .center-media-wrapper .progress-bar {
+        min-width: 350px;
+    }
+}
+
+
+@media screen and (max-width:908px) {
+    .center-media-wrapper {
+        transform:scale(0.9)
+    }
+
+    .right-media {
+        transform:scale(0.9)
+    }
+}
+
+@media screen and (max-width:830px) {
+    .center-media-wrapper {
+        transform:scale(0.8);
+        padding-left:30px;
+        gap:0px;
+    }
+
+    .right-media {
+        transform:scale(0.8)
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .center-media-wrapper {
+        transform: scale(0.7);
+        padding-left: 40px;
+        gap: 0px;
+    }
+}

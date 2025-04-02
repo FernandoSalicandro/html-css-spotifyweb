@@ -776,6 +776,7 @@ h4 {
 
 .left-media img {
     min-width: 60px;
+    max-width: 60px;
     aspect-ratio: 1;
     object-fit: cover;
 }
@@ -803,7 +804,7 @@ h4 {
 /* icone like&aggiungi */
 .like-folder {
     align-self: center;
-    margin-left: 30px;
+    margin-left: 20px;
     gap: 10px;
     display: flex;
 }
@@ -923,4 +924,8 @@ h4 {
     gap: 10px;
     align-items: center;
     justify-content: center;
+}
+
+.right-media .progerss-line {
+    min-width: 130px;
 }
