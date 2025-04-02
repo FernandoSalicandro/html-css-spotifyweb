@@ -513,7 +513,7 @@ h4 {
 }
 
 .nav-bar .install-app img {
-    width: 20px;
+    width: 36px;
 }
 
 .nav-bar .install-app span {
@@ -716,4 +716,23 @@ h4 {
 
 .center-media {
     width: 50%;
+    display:flex;
+    justify-content: center;
+}
+
+.play-media-options{
+    
+    gap: 20px;
+    padding-top: 10px;
+}
+.play-media-options i {
+    vertical-align: middle;
+}
+
+.play-media-options i {
+  font-size:25px;
+}
+
+.play-media-options i:nth-child(3) {
+    font-size: 30px;
 }
