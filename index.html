@@ -27,7 +27,7 @@
                     <li class=""><i class="fa-solid fa-lines-leaning pr-10"></i><a href=""> La tua libreria</a></li>
                 </ul>
                 <h4>PLAYLIST</h4>
-                <a href="" class="create-playlist"><i class="fa-solid fa-plus "></i>Crea Playlist</a>
+                <a href="" class="create-playlist"><i class="fa-solid fa-plus"></i>Crea Playlist</a>
                 <ul>
                     <li><a href="">Nome Playlist</a></li>
                     <li><a href="">Nome Playlist</a></li>
@@ -75,53 +75,73 @@
                     <h1>Recently Played</h1>
                     <section class="cards">
                         <div class="card">
-                            <img src="./img/metal_lifting.jpg" alt="">
+                            <div class="card-image">
+                                <img src="./img/metal_lifting.jpg" alt="">
+                                <i class="fa-regular fa-play-circle"></i>
+                            </div>
                             <h3>Heavy metal</h3>
                             <h4>Subtitle</h4>
                         </div>
                         <div class="card">
-                            <img src="./img/stranger.jpeg" alt="">
+                            <div class="card-image">
+                                <img src="./img/stranger.jpeg" alt="">
+                                <i class="fa-regular fa-play-circle"></i>
+                            </div>
                             <h3>Stranger Things, Vol.1 (a Netflix Original Series Soundtrack)</h3>
                             <h4>Kyle Dixon & Michael Stein</h4>
                         </div>
                         <div class="card">
-                            <img src="./img/aquietplace.jpeg" alt="">
+                            <div class="card-image">
+                                <img src="./img/aquietplace.jpeg" alt="">
+                                <i class="fa-regular fa-play-circle"></i>
+                            </div>
                             <h3>A Quiet Place</h3>
                             <h4>Subtitle</h4>
                         </div>
                         <div class="card">
-                            <img src="./img/split.jpeg" alt="">
+                            <div class="card-image">
+                                <img src="./img/split.jpeg" alt="">
+                                <i class="fa-regular fa-play-circle"></i>
+                            </div>
                             <h3>Split</h3>
                             <h4>Subtitle</h4>
                         </div>
                         <div class="card">
-                            <img src="./img/cure.jpeg" alt="">
+                            <div class="card-image">
+                                <img src="./img/cure.jpeg" alt="">
+                                <i class="fa-regular fa-play-circle"></i>
+                            </div>
                             <h3>A Cure for Wellness</h3>
                             <h4>Subtitle</h4>
                         </div>
                         <div class="card">
-                            <img src="./img/sinister.jpeg" alt="">
-                            <h3>Sinister</h3></a>
-                            <h4>Subtitle</h4></a>
-
-
-
+                            <div class="card-image">
+                                <img src="./img/sinister.jpeg" alt="">
+                                <i class="fa-regular fa-play-circle"></i>
+                            </div>
+                            <h3>Sinister</h3>
+                            <h4>Subtitle</h4>
                         </div>
                     </section>
 
                     <h1>Creato per John Doe</h1>
                     <h4 class="ml-20 mt-10">Più ascolti, più accurati saranno i suggerimenti</h4>
                     <div class="cards">
-
                         <div class="card">
-                            <img src="./img/radar.jpeg" alt="">
+                            <div class="card-image">
+                                <img src="./img/radar.jpeg" alt="">
+                                <i class="fa-regular fa-play-circle"></i>
+                            </div>
                             <h3>A Cure for Wellness</h3>
-                            <h4></h4>
+                            <h4>Subtitle</h4>
                         </div>
                         <div class="card">
-                            <img src="./img/mixdaily.jpeg" alt="">
+                            <div class="card-image">
+                                <img src="./img/mixdaily.jpeg" alt="">
+                                <i class="fa-regular fa-play-circle"></i>
+                            </div>
                             <h3>Sinister</h3>
-                            <h4></h4>
+                            <h4>Subtitle</h4>
                         </div>
                     </div>
 
@@ -163,18 +183,36 @@
                     <a href=""><i class="fa-regular fa-folder"></i></a>
                 </div>
             </div>
-            <div class="center-media">
+            <div class="center-media-wrapper flex column">
                 <div class="play-media-options flex">
-                    <i class="fa solid fa-random"></i>
-                    <i class="fa solid fa-step-backward"></i>
-                    <i class="fa solid fa-play-circle"></i>
-                    <i class="fa solid fas fa-step-forward"></i>
-                    <i class="fa solid fa-redo-alt"></i>
+                    <a href="#"><i class="fa solid fa-random"></i></a>
+<a href="#"><i class="fa solid fa-step-backward"></i></a>
+<a href="#"><i class="fa-regular fa-circle-play"></i></a>
+<a href="#"><i class="fa solid fas fa-step-forward"></i></a>
+<a href="#"><i class="fa solid fa-redo-alt"></i></a>
+                </div>
+
+                <div class="progress-bar flex">
+                    <span>0:25</span>
+                    <div class="progress-line">
+                        <div class="progress"></div>
+                    </div>
+                    <span>4:25</span>
                 </div>
             </div>
-            <div class="right-media">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque omnis ut odit ipsum
-                laborum minima? Molestiae culpa soluta earum provident officia officiis possimus, adipisci, natus labore
-                assumenda molestias ullam nesciunt.</div>
+
+
+            <div class="right-media flex">
+                <i class="fa-solid fa-list-ul"></i>
+                <i class="fa-solid fa-desktop"></i>
+                <i class="fa-solid fa-volume-up"></i>
+                <div class="progress-bar flex">
+                    <div class="progress-line">
+                        <div class="progress"></div>
+                    </div>
+                </div>
+
+            </div>
         </div>
     </div>
 </body>
