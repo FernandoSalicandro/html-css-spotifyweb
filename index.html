@@ -16,35 +16,47 @@
     <!-- WRAPPER -->
     <div class="wrapper">
         <main class="flex">
-            <!-- NAV BAR -->
+            <!-- SIDE BAR DI NAVIGAZIONE -->
             <div class="nav-bar">
 
-                <!-- LOGO -->
+                <!-- LOGO SPOTIFY -->
                 <img src="./img/logo.svg" alt="">
+
+                <!-- MENU DI NAVIGAZIONE PRINCIPALE-->
                 <ul>
                     <li class="home "><i class="fa-solid fa-house pr-10"></i><a href="">Home</a></li>
                     <li class=""><i class="fa-solid fa-magnifying-glass pr-10"></i><a href="">Cerca</a></li>
                     <li class=""><i class="fa-solid fa-lines-leaning pr-10"></i><a href=""> La tua libreria</a></li>
                 </ul>
+
+                <!-- SEZIONE PLAYLIST DELL'UTENTE -->
+
                 <h4>PLAYLIST</h4>
                 <a href="" class="create-playlist"><i class="fa-solid fa-plus"></i>Crea Playlist</a>
+
+                <!-- LISTA PLAYLIST DELL'UTENTE -->
                 <ul>
                     <li><a href="">Nome Playlist</a></li>
                     <li><a href="">Nome Playlist</a></li>
-                    <!-- <li><a href="">Nome Playlist</a></li>
                     <li><a href="">Nome Playlist</a></li>
                     <li><a href="">Nome Playlist</a></li>
                     <li><a href="">Nome Playlist</a></li>
-                    <li><a href="">Nome Playlist</a></li> -->
+                    <li><a href="">Nome Playlist</a></li>
+                    <li><a href="">Nome Playlist</a></li>
                 </ul>
 
+                <!-- BOTTOM SIDE BAR -->
                 <div class="bottom-content">
+
+                    <!-- LINK INSTALLAZIONE APP -->
                     <div class="install-app">
 
                         <a href=""> <img src="./img/download.svg" alt=""></a>
                         <a href="">Installa App</a>
                     </div>
                     <hr>
+
+                    <!-- PROFILO UTENTE -->
                     <div class="profile">
                         <a href=""><img src="./img/profile.svg" alt=""></a>
                         <a href="">
@@ -56,13 +68,18 @@
                 </div>
 
             </div>
+            <!-- FINE SIDE BAR DI NAVIGAZIONE -->
+
             <!-- MAIN CONTENT-->
             <div class="play-list flex">
                 <div class="play-list-main">
 
+                    <!-- BANNER UPGRADE -->
                     <div class="upgrade-bar">
                         <a href="">EFFETTUA L'UPGRADE</a>
                     </div>
+
+                    <!-- MENU NAVIGAZIONE CONTENUTI -->
 
                     <ul class="flex">
                         <li class=""><a href="">IN EVIDENZA</a></li>
@@ -72,8 +89,11 @@
                         <li><a href="">NUOVE USCITE</a></li>
                         <li><a href="">SCOPRI</a></li>
                     </ul>
+
+                    <!-- SEZIONE RECENTLY PLAYED -->
                     <h1>Recently Played</h1>
                     <section class="cards">
+                        <!-- CARD ALBUM CON HOVER PLAY -->
                         <div class="card">
                             <div class="card-image">
                                 <img src="./img/metal_lifting.jpg" alt="">
@@ -123,10 +143,11 @@
                             <h4>Subtitle</h4>
                         </div>
                     </section>
-
+                    <!-- SEZIONE SUGGESTED CON STRUTTURA IDENTICA ALLA SEZIONE PRECEDENTE -->
                     <h1>Creato per John Doe</h1>
                     <h4 class="ml-20 mt-10">Più ascolti, più accurati saranno i suggerimenti</h4>
                     <div class="cards">
+                        <!-- MIX PERSONALIZZATI -->
                         <div class="card">
                             <div class="card-image">
                                 <img src="./img/radar.jpeg" alt="">
@@ -144,11 +165,11 @@
                             <h4>Subtitle</h4>
                         </div>
                     </div>
-
+                    <!-- SEZIONE ARTISTI PIU POPOLARI -->
                     <h1>Artisti più Popolari</h1>
                     <h4 class="ml-20 mt-10">Più ascolti, più accurati saranno i suggerimenti</h4>
                     <div class="cards">
-
+                        <!-- CARD ARTISTI CON IMMAGINE CIRCOLARE -->
                         <div class="card">
                             <img src="./img/youg.jpeg" alt="" class="circle-img">
                             <h3>A Cure for Wellness</h3>
@@ -166,9 +187,14 @@
 
             </div>
         </main>
+
+        <!-- MEDIA PLAYER BAR IN POSIZIONE FIXED -->
         <div class="play-media-bar">
+            <!-- SEZIONE BRANO IN RIPRODUZIONE A SINISTRA -->
             <div class="left-media">
+                <!-- COVER DEL BRANO -->
                 <a href=""><img src="./img/sinister.jpeg" alt=""></a>
+                <!-- INFO DEL BRANO -->
                 <div class="description-media">
                     <a href="">
                         <h3>Sinister</h3>
@@ -177,21 +203,24 @@
                         <h4>Brano nome</h4>
                     </a>
                 </div>
-
+                <!-- PULSANTI DI LIKE E AGGIUNGI A FOLDER -->
                 <div class="like-folder">
                     <a href=""><i class="fa-regular fa-heart"></i></a>
                     <a href=""><i class="fa-regular fa-folder"></i></a>
                 </div>
             </div>
+
+            <!-- SEZIONE CONTROLLI DI RIPRODUZIONE - CENTRALE  -->
             <div class="center-media-wrapper flex column">
+                <!-- PULSANTI DI CONTROLLO (PLAY,FF,BACK,RANDOM,REDO) -->
                 <div class="play-media-options flex">
                     <a href="#"><i class="fa solid fa-random"></i></a>
-<a href="#"><i class="fa solid fa-step-backward"></i></a>
-<a href="#"><i class="fa-regular fa-circle-play"></i></a>
-<a href="#"><i class="fa solid fas fa-step-forward"></i></a>
-<a href="#"><i class="fa solid fa-redo-alt"></i></a>
+                    <a href="#"><i class="fa solid fa-step-backward"></i></a>
+                    <a href="#"><i class="fa-regular fa-circle-play"></i></a>
+                    <a href="#"><i class="fa solid fas fa-step-forward"></i></a>
+                    <a href="#"><i class="fa solid fa-redo-alt"></i></a>
                 </div>
-
+                <!-- BARRA DI PROGRESSO DEL BRANO -->
                 <div class="progress-bar flex">
                     <span>0:25</span>
                     <div class="progress-line">
@@ -201,11 +230,12 @@
                 </div>
             </div>
 
-
+            <!-- SEZIONE CONTROLLI DI VOLUME E DISPOSITIVO -->
             <div class="right-media flex">
                 <i class="fa-solid fa-list-ul"></i>
                 <i class="fa-solid fa-desktop"></i>
                 <i class="fa-solid fa-volume-up"></i>
+                <!-- BARRA DEL VOLUME -->
                 <div class="progress-bar flex">
                     <div class="progress-line">
                         <div class="progress"></div>
