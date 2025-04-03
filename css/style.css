@@ -424,7 +424,12 @@ h4 {
 
     --highlight-color: rgba(173, 255, 47, 255);
 
+    --num-card: 6;
 
+}
+ /* calcolo altezza  */
+main {
+    height: calc(100vh - 80px);
 }
 
 /* ###################################
@@ -439,10 +444,30 @@ h4 {
     flex-direction: column;
     gap: 20px;
     width: 250px;
-    height: calc(100vh - 80px);
+    height: 100%;
+    
     overflow-y: auto;
     padding: 10px 40px 0px 30px;
     background: var(--nav-bar-background-color);
+}
+
+/* Contenuto superiore della sidebar */
+.nav-bar > *:not(.bottom-content) {
+    flex-shrink: 1; 
+}
+
+/* Lista playlist */
+.nav-bar .inside-scroll {
+    flex-shrink: 1;
+    min-height: 0; 
+    overflow-y: auto; 
+}
+
+/* Contenuto bottom */
+.nav-bar .bottom-content {
+    margin-top: auto;
+    flex-shrink: 0; 
+    padding-bottom: 10px;
 }
 
 /* logo spotify */
@@ -451,7 +476,13 @@ h4 {
     max-width: 80%;
 }
 
-/* stili base elementi lista navigazione */
+.logo-small {
+    display:none;
+}
+
+
+
+/* stili elementi lista navigazione */
 
 .nav-bar ul li {
     list-style: none;
@@ -506,9 +537,6 @@ h4 {
         background-color: white;
     }
 }
-
-
-
 
 
 .nav-bar a {
@@ -594,11 +622,6 @@ h4 {
     border-radius: 50%;
 }
 
-
-
-
-
-
 /* ###################################
         PLAY LIST MAIN CONTENTS
 ################################### */
@@ -616,7 +639,7 @@ h4 {
 }
 
 .upgrade-bar a {
-    margin-right: 50px;
+    margin-left: auto;
     color: white;
     border: 1px solid white;
     border-radius: 20px;
@@ -627,7 +650,6 @@ h4 {
 .upgrade-bar a:hover {
     transform: scale(1.1);
 }
-
 
 /* container principale dei contenuti */
 .play-list {
@@ -686,13 +708,14 @@ h4 {
 .play-list-main h1 {
     margin-top: 50px;
     margin-left: 20px;
+    font-size: clamp(1.5rem, (2vw + 0.1rem), 2rem);
 }
 
 /* griglia delle cards (album) */
 .cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 10px;
     padding-left: 20px;
     padding-right: 20px;
 
@@ -700,11 +723,9 @@ h4 {
 
 /* singola card */
 .card {
-    width: calc(100%/6 - 20px);
+    width: calc((100% - (10px * ( var(--num-card) - 0))) / var(--num-card));
     margin-top: 20px;
     text-align: center;
-    /* impedisco alle cards di rimpicciolirsi sotto questa dimensione */
-    min-width:105px;
 }
 
 .card h3 {
@@ -751,181 +772,188 @@ h4 {
               PLAY MEDIA BAR
 ################################### */
 
-/* Player in posizione fixed */
 .play-media-bar {
     position: fixed;
-    display: flex;
-    justify-content: space-between;
+    bottom: 0;
+    left: 0;
     width: 100%;
     height: 80px;
     background-color: var(--play-bar-background-color);
-    z-index: 9999;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
 }
 
-/* sezione sinistra con info brano */
-.left-media {
-    width: 25%;
+/* Colonne */
+.media-col {
+    height: 100%;
     display: flex;
-    padding-left: 10px;
-    ;
-    gap: 10px;
     align-items: center;
 }
 
-.left-media img {
-    min-width: 60px;
-    max-width: 60px;
-    aspect-ratio: 1;
+.left-col, .right-col {
+    width: 250px;
+}
+
+.center-col {
+    flex: 1;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 200px;
+}
+
+/* Colonna sinistra */
+.left-col {
+    justify-content: space-between;
+    padding-right: 15px;
+}
+
+.song-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.song-info img {
+    width: 42px;
+    height: 42px;
     object-fit: cover;
 }
 
-/* titolo e nome artista&brano */
-.description-media {
+.text-info {
     display: flex;
     flex-direction: column;
-    white-space: nowrap;
 }
 
-.description-media a:last-child {
+.song-name {
+    color: white;
+    font-weight: bold;
+}
+
+.artist-name {
     color: var(--link-sub-color);
+    font-size: 0.8em;
 }
 
-.left-media h3 {
-    margin-top: 10px;
-}
-
-.left-media h4:hover {
-    text-decoration: underline;
-    color: rgb(150, 149, 149);
-}
-
-/* icone like&aggiungi */
-.like-folder {
-    align-self: center;
-    margin-left: 20px;
-    gap: 10px;
+.song-actions {
     display: flex;
+    gap: 8px;
 }
 
-.fa-heart,
-.fa-folder {
-    color: var(--link-sub-color);
-}
-
-.fa-heart:hover,
-.fa-folder:hover {
-    color: rgb(150, 149, 149);
-}
-
-/* sezione centrale player - controlli di riproduzione
- */
-.center-media-wrapper {
-    width: 50%;
+/* Colonna centrale */
+.playback-controls {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    gap: clamp(10px, 2vw, 20px);
+    min-width: 0;
+    flex-shrink:1;
+}
+
+.play-btn {
+    font-size: 1.8em;
+}
+
+.play-btn:hover {
+    transform:scale(1.1);
+}
+
+.progress-container {
+    display: flex;
     align-items: center;
     gap: 10px;
+    width: 100%;
+    max-width: 400px;
 }
 
-/* pulsanti di controllo di riproduzione */
-.play-media-options {
-
-    gap: 30px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    align-items: center;
-
-}
-
-.play-media-options a i {
-    vertical-align: middle;
-    font-size: 20px;
-}
-
-/* stile pulsante play */
-.play-media-options a:nth-child(3) i {
-    font-size: 35px;
-}
-
-.play-media-options a:nth-child(3):hover {
-    transform: scale(1.1);
-}
-
-/* Barra di progresso */
 .progress-bar {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    width: 60%;
-    padding-bottom: 5px;
-}
-
-.center-media-wrapper .progress-bar {
-    min-width: 400px;
-}
-
-.progress-bar span {
-    font-size: 12px;
-}
-
-.progress-line {
-    flex-grow: 1;
+    flex: 1;
     height: 4px;
-    background-color: var(--link-sub-color);
-    border-radius: 10px;
+    background: var(--link-sub-color);
+    border-radius: 2px;
     position: relative;
 }
 
-
 .progress {
-    position: absolute;
     width: 30%;
     height: 100%;
-    background-color: darkgrey;
-    border-radius: 10px;
+    background: white;
+    border-radius: 2px;
 }
 
-/* 'pallino' effetto hover sulla barra di progresso */
+/* Colonna destra */
+.right-col {
+    justify-content: center;
+    gap: 15px;
+}
 
+.volume-control {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.volume-bar {
+    width: 100px;
+    height: 4px;
+    background: var(--link-sub-color);
+    border-radius: 2px;
+    position: relative;
+}
+
+/* Stili comuni */
+button {
+    background: none;
+    border: none;
+    color: var(--link-sub-color);
+    cursor: pointer;
+}
+
+button:hover {
+    color: white;
+}
+
+.time {
+    color: var(--link-sub-color);
+    font-size: 0.8em;
+}
+
+/* Barre di progresso con pallino */
+.progress-bar,
+.volume-bar {
+    position: relative;
+    cursor: pointer;
+}
+
+.progress {
+    position: relative;
+}
+
+/* Effetti hover per le barre di progresso */
+.progress-bar:hover .progress,
+.volume-bar:hover .progress {
+    background: var(--highlight-color);
+}
+
+/* Pallino di trascinamento */
 .progress::after {
+    content: '';
     display: none;
     position: absolute;
-    content: '';
-    background-color: darkgrey;
-    border: 6px solid darkgrey;
-    border-radius: 50%;
-    left: 90%;
+    right: -6px;
     top: 50%;
     transform: translateY(-50%);
-    bottom: 1px;
+    width: 12px;
+    height: 12px;
+    background-color: var(--highlight-color);
+    border-radius: 50%;
 }
 
-/* effetti hover sulla barra di progresso */
-.progress-line:hover {
-
-    .progress::after {
-        display: block;
-
-    }
-
-    .progress {
-        background-color: rgb(106, 136, 53);
-    }
-}
-
-/* sezione destra del media player - Volume e dispositivi*/
-.right-media {
-    width: 25%;
-    display: flex;
-    padding: 10px;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-}
-
-.right-media .progerss-line {
-    min-width: 130px;
+/* Mostra e colora il pallino all'hover */
+.progress-bar:hover .progress::after,
+.volume-bar:hover .progress::after {
+    display: block;
+  
 }

@@ -1,36 +1,97 @@
- @media screen and (max-width:1025px) {
-    .center-media-wrapper .progress-bar {
-        min-width: 350px;
+
+/* Large Desktop */
+@media screen and (max-width: 1024px) {
+    :root {
+        --num-card: 5;
     }
 }
 
-
-@media screen and (max-width:908px) {
-    .center-media-wrapper {
-        transform:scale(0.9)
+/* MD*/
+@media screen and (max-width: 880px) {
+    :root {
+        --num-card: 4;
     }
 
-    .right-media {
-        transform:scale(0.9)
-    }
-}
-
-@media screen and (max-width:830px) {
-    .center-media-wrapper {
-        transform:scale(0.8);
-        padding-left:30px;
-        gap:0px;
-    }
-
-    .right-media {
-        transform:scale(0.8)
+    .center-col {
+        padding-left: 20px;
     }
 }
 
-@media screen and (max-width: 768px) {
-    .center-media-wrapper {
-        transform: scale(0.7);
-        padding-left: 40px;
-        gap: 0px;
+/* Tablet */
+@media screen and (max-width: 640px) {
+    :root {
+        --num-card: 2;
+    }
+
+    /* Media Player */
+    .left-col {
+        padding-right: 20px;
+    }
+
+    .song-actions {
+        flex-direction: column;
+        margin-left: 56px;
+    }
+
+    .playback-controls {
+        transform: scale(1.2);
+    }
+
+    .volume-bar {
+        width: 70px;
+    }
+}
+
+/* Mobile */
+@media screen and (max-width: 560px) {
+    /* Navbar*/
+    .nav-bar {
+        width: 52px;
+        align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    /* Logo */
+    .nav-bar img:first-of-type {
+        display: none;
+    }
+
+    .nav-bar .logo-small {
+        display: block;
+        width: 24px;
+        padding-right: 5px;
+        max-width: none;
+    }
+
+    /* Elementi nascosti */
+    .nav-bar ul li a,
+    .nav-bar h4,
+    .install-app a:last-child,
+    .nav-bar h3,
+    .nav-bar hr,
+    .nav-bar .create-playlist,
+    .inside-scroll {
+        display: none;
+    }
+
+    /* Bottom Content */
+    .nav-bar .bottom-content {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        gap: 20px;
+    }
+
+    .nav-bar .install-app img,
+    .nav-bar .profile img {
+        display: block;
+        width: 25px;
+        max-width: none;
+    }
+
+    /* Main Content*/
+    .play-list {
+        width: calc(100% - 52px);
     }
 }

@@ -21,7 +21,8 @@
             <div class="nav-bar">
 
                 <!-- LOGO SPOTIFY -->
-                <img src="./img/logo.svg" alt="">
+                <img src="./img/logo.svg" alt="" class="">
+                <img src="./img/logo-small.svg" alt="" class="logo-small">
 
                 <!-- MENU DI NAVIGAZIONE PRINCIPALE-->
                 <ul>
@@ -36,7 +37,7 @@
                 <a href="" class="create-playlist"><i class="fa-solid fa-plus"></i>Crea Playlist</a>
 
                 <!-- LISTA PLAYLIST DELL'UTENTE -->
-                <ul>
+                <ul class="inside-scroll">
                     <li><a href="">Nome Playlist</a></li>
                     <li><a href="">Nome Playlist</a></li>
                     <li><a href="">Nome Playlist</a></li>
@@ -45,6 +46,7 @@
                     <li><a href="">Nome Playlist</a></li>
                     <li><a href="">Nome Playlist</a></li>
                 </ul>
+
 
                 <!-- BOTTOM SIDE BAR -->
                 <div class="bottom-content">
@@ -189,63 +191,52 @@
             </div>
         </main>
 
-        <!-- MEDIA PLAYER BAR IN POSIZIONE FIXED -->
         <div class="play-media-bar">
-            <!-- SEZIONE BRANO IN RIPRODUZIONE A SINISTRA -->
-            <div class="left-media">
-                <!-- COVER DEL BRANO -->
-                <a href=""><img src="./img/sinister.jpeg" alt=""></a>
-                <!-- INFO DEL BRANO -->
-                <div class="description-media">
-                    <a href="">
-                        <h3>Sinister</h3>
-                    </a>
-                    <a href="">
-                        <h4>Brano nome</h4>
-                    </a>
+            <!-- Colonna sinistra - Info brano -->
+            <div class="media-col left-col">
+                <div class="song-info">
+                    <img src="./img/sinister.jpeg" alt="Cover brano">
+                    <div class="text-info">
+                        <div class="song-name">Sinister</div>
+                        <div class="artist-name">Brano nome</div>
+                    </div>
                 </div>
-                <!-- PULSANTI DI LIKE E AGGIUNGI A FOLDER -->
-                <div class="like-folder">
-                    <a href=""><i class="fa-regular fa-heart"></i></a>
-                    <a href=""><i class="fa-regular fa-folder"></i></a>
+                <div class="song-actions">
+                    <button><i class="fa-regular fa-heart"></i></button>
+                    <button><i class="fa-regular fa-folder"></i></button>
                 </div>
             </div>
-
-            <!-- SEZIONE CONTROLLI DI RIPRODUZIONE - CENTRALE  -->
-            <div class="center-media-wrapper flex column">
-                <!-- PULSANTI DI CONTROLLO (PLAY,FF,BACK,RANDOM,REDO) -->
-                <div class="play-media-options flex">
-                    <a href="#"><i class="fa solid fa-random"></i></a>
-                    <a href="#"><i class="fa solid fa-step-backward"></i></a>
-                    <a href="#"><i class="fa-regular fa-circle-play"></i></a>
-                    <a href="#"><i class="fa solid fas fa-step-forward"></i></a>
-                    <a href="#"><i class="fa solid fa-redo-alt"></i></a>
+        
+            <!-- Colonna centrale - Controlli riproduzione -->
+            <div class="media-col center-col">
+                <div class="playback-controls">
+                    <button><i class="fa-solid fa-random"></i></button>
+                    <button><i class="fa-solid fa-step-backward"></i></button>
+                    <button class="play-btn"><i class="fa-regular fa-circle-play"></i></button>
+                    <button><i class="fa-solid fa-step-forward"></i></button>
+                    <button><i class="fa-solid fa-redo-alt"></i></button>
                 </div>
-                <!-- BARRA DI PROGRESSO DEL BRANO -->
-                <div class="progress-bar flex">
-                    <span>0:25</span>
-                    <div class="progress-line">
+                <div class="progress-container">
+                    <span class="time current">0:25</span>
+                    <div class="progress-bar">
                         <div class="progress"></div>
                     </div>
-                    <span>4:25</span>
+                    <span class="time total">4:25</span>
                 </div>
             </div>
-
-            <!-- SEZIONE CONTROLLI DI VOLUME E DISPOSITIVO -->
-            <div class="right-media flex">
-                <i class="fa-solid fa-list-ul"></i>
-                <i class="fa-solid fa-desktop"></i>
-                <i class="fa-solid fa-volume-up"></i>
-                <!-- BARRA DEL VOLUME -->
-                <div class="progress-bar flex">
-                    <div class="progress-line">
+        
+            <!-- Colonna destra - Controlli volume -->
+            <div class="media-col right-col">
+                <button><i class="fa-solid fa-list-ul"></i></button>
+                <button><i class="fa-solid fa-desktop"></i></button>
+                <div class="volume-control">
+                    <button><i class="fa-solid fa-volume-up"></i></button>
+                    <div class="volume-bar">
                         <div class="progress"></div>
                     </div>
                 </div>
-
             </div>
         </div>
-    </div>
 </body>
 
 </html>
